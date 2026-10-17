@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reeta's Revive · Sample site</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F4F1EA}
+a{color:#16181D}a:hover{color:#D9430E}
+.btn{transition:background .15s ease,color .15s ease,transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.cls{transition:border-color .2s ease,transform .2s ease}
+.cls:hover{border-color:#16181D;transform:translateY(-3px)}
+input:focus,select:focus,button:focus-visible,a:focus-visible{outline:3px solid #FF5A1F;outline-offset:2px}
+@media (max-width: 860px){.hide-sm{display:none !important}.stack-sm{flex-direction:column !important;align-items:stretch !important}.g1-sm{grid-template-columns:minmax(0,1fr) !important}}
+@media (prefers-reduced-motion: reduce){*{transition:none !important}}
+</style>
+
+</head>
+<body>
+<div id="app"></div>
+<script type="text/x-template" id="tpl"><div style="background:#FF5A1F;color:#16181D;text-align:center;font:700 13px Manrope,sans-serif;padding:8px 16px">Sample concept made for Reeta's Revive. Not the official site: bookings are switched off.</div>
+<div style="font-family: 'Manrope', sans-serif; color: #16181D; background: #F4F1EA; min-height: 100vh">
+
+  <header style="position: sticky; top: 0; z-index: 20; background: #16181D; color: #F4F1EA">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#top" style="text-decoration: none; color: #F4F1EA; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 30px; letter-spacing: 0.04em; text-transform: uppercase">Reeta's Revive</a>
+      <nav class="hide-sm" style="display: flex; gap: 28px; font-weight: 700; font-size: 15px">
+        <a href="#classes" style="color: #F4F1EA; text-decoration: none">Classes</a>
+        <a href="#schedule" style="color: #F4F1EA; text-decoration: none">Schedule</a>
+        <a href="#plans" style="color: #F4F1EA; text-decoration: none">Membership</a>
+        <a href="#visit" style="color: #F4F1EA; text-decoration: none">Visit</a>
+      </nav>
+      <a href="#trial" class="btn" :style="`background: ${accent}; color: #16181D; text-decoration: none; font-weight: 800; font-size: 14px; padding: 12px 20px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center`">Book a free trial</a>
+    </div>
+  </header>
+
+  <section id="top" style="background: #16181D; color: #F4F1EA; overflow: hidden">
+    <div class="stack-sm" style="max-width: 1280px; margin: 0 auto; padding: 72px 24px 88px; display: flex; gap: 48px; align-items: center">
+      <div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <p :style="`margin: 0; font-weight: 800; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: ${accent}`">Gym · Yoga · Zumba · Salsa · Ballroom</p>
+        <h1 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(56px, 8vw, 112px); line-height: 0.9; text-transform: uppercase">Lift. Dance. Stretch. One roof in Powai.</h1>
+        <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #C9C5BC; max-width: 520px">Weights and cardio on the floor, group classes in the studio. Train on your own or join a batch. Your first class is on us.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap">
+          <a href="#trial" class="btn" :style="`background: ${accent}; color: #16181D; text-decoration: none; font-weight: 800; padding: 16px 28px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center`">Book a free trial</a>
+          <a href="#schedule" class="btn" style="border: 2px solid #F4F1EA; color: #F4F1EA; text-decoration: none; font-weight: 800; padding: 14px 26px; min-height: 52px; box-sizing: border-box; display: inline-flex; align-items: center">See this week's classes</a>
+        </div>
+        <div style="display: flex; gap: 32px; flex-wrap: wrap; padding-top: 16px; border-top: 1px solid #2E3138">
+          <div><div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 36px">19 yrs</div><div style="color: #A9A59C; font-size: 14px">in Powai</div></div>
+          <div><div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 36px">7</div><div style="color: #A9A59C; font-size: 14px">class styles</div></div>
+          <div><div style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 36px">Till 10 pm</div><div style="color: #A9A59C; font-size: 14px">open late</div></div>
+        </div>
+      </div>
+      <div style="flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+        <div style="grid-row: span 2; min-height: 460px; background: #2A2D33; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box; color: #A9A59C; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase">Your gym floor photo</div>
+        <div :style="`min-height: 224px; background: ${accent}; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box; color: #16181D; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase`">Your Zumba class photo</div>
+        <div style="min-height: 224px; background: #3A3D44; display: flex; align-items: flex-end; padding: 20px; box-sizing: border-box; color: #C9C5BC; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase">Your studio photo</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes" style="max-width: 1280px; margin: 0 auto; padding: 96px 24px 48px">
+    <div class="stack-sm" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px">
+      <h2 style="margin: 0; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(44px, 5vw, 72px); line-height: 0.95; text-transform: uppercase">Pick your thing</h2>
+      <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #4A4C52">Every membership includes the gym floor. Add any group class, or switch between them week to week.</p>
+    </div>
+    <div class="g1-sm" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+      <template v-for="(c, idx) in classes">
+        <a href="#trial" @click="c.pick" class="cls" style="text-decoration: none; color: #16181D; background: #FFFFFF; border: 2px solid #E2DDD2; padding: 28px; display: flex; flex-direction: column; gap: 14px; min-height: 220px; box-sizing: border-box">
+          <svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#16181D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path :d="c.icon"></path></svg>
+          <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 32px; text-transform: uppercase; line-height: 1">{{c.name}}</span>
+          <span style="font-size: 15px; line-height: 1.55; color: #4A4C52; flex: 1">{{c.text}}</span>
+          <span style="font-weight: 800; font-size: 14px; color: #D9430E">Try it free →</span>
+        </a>
+      </template>
+    </div>
+  </section>
+
+  <section id="schedule" style="max-width: 1280px; margin: 0 auto; padding: 64px 24px">
+    <div style="background: #16181D; color: #F4F1EA; padding: 48px clamp(20px, 4vw, 56px)">
+      <div class="stack-sm" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 28px">
+        <div>
+          <h2 style="margin: 0 0 8px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(40px, 4.5vw, 64px); text-transform: uppercase; line-height: 0.95">This week</h2>
+          <p style="margin: 0; color: #A9A59C; font-size: 15px">Sample timetable: replace with your real batches.</p>
+        </div>
+        <div role="group" aria-label="Choose a day" style="display: flex; gap: 6px; flex-wrap: wrap">
+          <template v-for="(d, idx) in days">
+            <button @click="d.pick" :aria-pressed="d.on" :style="d.style">{{d.label}}</button>
+          </template>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column">
+        <template v-for="(s, idx) in slots">
+          <div class="stack-sm" style="display: flex; align-items: center; gap: 24px; padding: 18px 0; border-top: 1px solid #2E3138">
+            <span :style="`font-family: 'Big Shoulders Display', sans-serif; font-weight: 700; font-size: 26px; width: 140px; color: ${accent}`">{{s.time}}</span>
+            <span style="font-weight: 800; font-size: 19px; flex: 1">{{s.name}}</span>
+            <span style="color: #A9A59C; font-size: 15px; width: 160px">{{s.len}}</span>
+            <a href="#trial" @click="s.pick" class="btn" style="border: 2px solid #F4F1EA; color: #F4F1EA; text-decoration: none; font-weight: 800; font-size: 14px; padding: 10px 18px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Book this</a>
+          </div>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" style="max-width: 1280px; margin: 0 auto; padding: 64px 24px">
+    <h2 style="margin: 0 0 40px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(44px, 5vw, 72px); text-transform: uppercase; line-height: 0.95">Membership</h2>
+    <div class="g1-sm" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+      <div style="background: #FFFFFF; border: 2px solid #E2DDD2; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-weight: 800; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4C52">Monthly</span>
+        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 56px; line-height: 1">₹ —</span>
+        <span style="color: #4A4C52; font-size: 15px; line-height: 1.6">Gym floor, cardio and one group class style.</span>
+      </div>
+      <div style="background: #16181D; color: #F4F1EA; border: 2px solid #16181D; padding: 32px; display: flex; flex-direction: column; gap: 12px; position: relative">
+        <span :style="`position: absolute; top: -14px; left: 32px; background: ${accent}; color: #16181D; font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 12px`">Most picked</span>
+        <span style="font-weight: 800; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #A9A59C">Quarterly</span>
+        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 56px; line-height: 1">₹ —</span>
+        <span style="color: #C9C5BC; font-size: 15px; line-height: 1.6">Gym floor plus unlimited group classes.</span>
+      </div>
+      <div style="background: #FFFFFF; border: 2px solid #E2DDD2; padding: 32px; display: flex; flex-direction: column; gap: 12px">
+        <span style="font-weight: 800; font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase; color: #4A4C52">Annual</span>
+        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 56px; line-height: 1">₹ —</span>
+        <span style="color: #4A4C52; font-size: 15px; line-height: 1.6">Everything, all year, at the best rate.</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="trial" style="max-width: 1280px; margin: 0 auto; padding: 64px 24px 96px">
+    <div class="stack-sm" :style="`display: flex; gap: 48px; align-items: flex-start; background: ${accent}; padding: 48px clamp(20px, 4vw, 56px)`">
+      <div style="flex: 1 1 0; min-width: 0">
+        <h2 style="margin: 0 0 16px; font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: clamp(48px, 6vw, 88px); text-transform: uppercase; line-height: 0.9">First class free</h2>
+        <p style="margin: 0; font-size: 18px; line-height: 1.6; max-width: 420px">Pick a class and a day. We will confirm your slot on WhatsApp within a few hours.</p>
+      </div>
+      <div style="flex: 1 1 0; min-width: 0; background: #F4F1EA; padding: 32px; box-sizing: border-box">
+        <template v-if="notSent">
+          <form style="display: flex; flex-direction: column; gap: 16px">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="t-name" style="font-weight: 800; font-size: 14px">Name</label>
+              <input id="t-name" autocomplete="name" style="min-height: 48px; border: 2px solid #16181D; background: #FFFFFF; padding: 0 14px; font-family: inherit; font-size: 16px">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="t-phone" style="font-weight: 800; font-size: 14px">WhatsApp number</label>
+              <input id="t-phone" type="tel" inputmode="numeric" autocomplete="tel" style="min-height: 48px; border: 2px solid #16181D; background: #FFFFFF; padding: 0 14px; font-family: inherit; font-size: 16px">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px">
+              <span style="font-weight: 800; font-size: 14px">Class</span>
+              <div role="group" aria-label="Class" style="display: flex; gap: 8px; flex-wrap: wrap">
+                <template v-for="(p, idx) in trialPills">
+                  <button type="button" @click="p.pick" :aria-pressed="p.on" :style="p.style">{{p.label}}</button>
+                </template>
+              </div>
+            </div>
+            <button type="button" @click="send" class="btn" style="min-height: 54px; border: 0; background: #16181D; color: #F4F1EA; font-family: inherit; font-weight: 800; font-size: 16px; cursor: pointer">Book my free {{trialClass}} class</button>
+          </form>
+        </template>
+        <template v-if="sent">
+          <div style="display: flex; flex-direction: column; gap: 12px; padding: 24px 0">
+            <svg aria-hidden="true" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#16181D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M7 12.5l3 3 7-7"></path></svg>
+            <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 40px; text-transform: uppercase; line-height: 1">You're in</span>
+            <span style="font-size: 16px; line-height: 1.6">We will message you on WhatsApp to confirm your free {{trialClass}} class.</span>
+            <button type="button" @click="reset" style="align-self: flex-start; min-height: 44px; border: 2px solid #16181D; background: transparent; font-family: inherit; font-weight: 800; padding: 0 18px; cursor: pointer">Book another</button>
+          </div>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <footer id="visit" style="background: #16181D; color: #F4F1EA">
+    <div class="g1-sm" style="max-width: 1280px; margin: 0 auto; padding: 64px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span style="font-family: 'Big Shoulders Display', sans-serif; font-weight: 900; font-size: 32px; text-transform: uppercase">Reeta's Revive</span>
+        <span style="color: #A9A59C; line-height: 1.6">Gym and fitness studio, Powai.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span :style="`font-weight: 800; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: ${accent}`">Visit</span>
+        <span style="color: #C9C5BC; line-height: 1.6">Crystal Centre, 4th Floor, Raheja Vihar,<br>Off Chandivali Farm Road<br>Powai, Mumbai</span>
+        <span style="color: #C9C5BC">Open till 10 pm</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px">
+        <span :style="`font-weight: 800; font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: ${accent}`">Talk to us</span>
+        <a href="#trial" style="color: #F4F1EA">WhatsApp us</a>
+        <a href="#top" style="color: #F4F1EA">Instagram</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+<script>
+const IMG = {};
+let vals;
+class DCLogic {
+  constructor(props) { this.props = props; this.state = {}; }
+  setState(p) { Object.assign(this.state, p); Object.assign(vals, this.renderVals()); }
+}
+
+const CLASSES = [
+  { name: 'Gym floor', text: 'Free weights, machines and cardio. Train at your own pace, trainers on the floor.', icon: 'M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12' },
+  { name: 'Yoga', text: 'Slow, steady sessions for strength, balance and flexibility.', icon: 'M12 5a2 2 0 1 0 0-.01M12 8v6M6 11l6 3 6-3M8 20l4-6 4 6' },
+  { name: 'Power Yoga', text: 'Faster flows that build heat, stamina and core strength.', icon: 'M13 2L4 14h7l-1 8 9-12h-7z' },
+  { name: 'Zumba', text: 'High-energy dance cardio. No dance experience needed.', icon: 'M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM21 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z' },
+  { name: 'Salsa', text: 'Learn the steps, then dance them. Come solo or with a partner.', icon: 'M8 4a2 2 0 1 0 0-.01M16 4a2 2 0 1 0 0-.01M8 7v6l-2 7M16 7v6l2 7M8 10h8' },
+  { name: 'Ballroom', text: 'Waltz, foxtrot and more. Popular with couples before a wedding.', icon: 'M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8z' }
+];
+const TRIAL = ['Gym floor', 'Yoga', 'Power Yoga', 'Zumba', 'Salsa', 'Ballroom', 'Belly dance'];
+const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+// Sample timetable only; the gym replaces it with real batches.
+const WEEK = {
+  Mon: [['7:00 am', 'Yoga', '60 min'], ['8:00 am', 'Power Yoga', '45 min'], ['6:30 pm', 'Zumba', '45 min'], ['8:00 pm', 'Salsa', '60 min']],
+  Tue: [['7:00 am', 'Power Yoga', '45 min'], ['6:30 pm', 'Belly dance', '60 min'], ['8:00 pm', 'Ballroom', '60 min']],
+  Wed: [['7:00 am', 'Yoga', '60 min'], ['6:30 pm', 'Zumba', '45 min'], ['8:00 pm', 'Salsa', '60 min']],
+  Thu: [['7:00 am', 'Power Yoga', '45 min'], ['6:30 pm', 'Belly dance', '60 min'], ['8:00 pm', 'Ballroom', '60 min']],
+  Fri: [['7:00 am', 'Yoga', '60 min'], ['6:30 pm', 'Zumba', '45 min'], ['8:00 pm', 'Salsa social', '90 min']],
+  Sat: [['8:00 am', 'Power Yoga', '60 min'], ['10:00 am', 'Zumba', '60 min'], ['5:00 pm', 'Ballroom', '60 min']],
+  Sun: [['8:00 am', 'Yoga', '75 min']]
+};
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { day: 'Mon', trial: 'Zumba', sent: false };
+  }
+  renderVals() {
+    const s = this.state;
+    const accent = this.props.accent ?? '#FF5A1F';
+    const pickTrial = (name) => () => this.setState({ trial: TRIAL.includes(name) ? name : name.replace(' social', ''), sent: false });
+    const pill = (on, dark) => 'min-height: 44px; padding: 0 16px; font-family: inherit; font-weight: 800; font-size: 14px; cursor: pointer; border: 2px solid ' + (dark ? '#F4F1EA' : '#16181D') + '; background: ' + (on ? (dark ? accent : '#16181D') : 'transparent') + '; color: ' + (on ? (dark ? '#16181D' : '#F4F1EA') : (dark ? '#F4F1EA' : '#16181D'));
+    return {
+      accent,
+      classes: CLASSES.map((c) => ({ ...c, pick: pickTrial(c.name) })),
+      days: DAYS.map((d) => ({ label: d, on: d === s.day ? 'true' : 'false', pick: () => this.setState({ day: d }), style: pill(d === s.day, true) })),
+      slots: WEEK[s.day].map(([time, name, len]) => ({ time, name, len, pick: pickTrial(name) })),
+      trialPills: TRIAL.map((t) => ({ label: t, on: t === s.trial ? 'true' : 'false', pick: () => this.setState({ trial: t }), style: pill(t === s.trial, false) })),
+      trialClass: s.trial,
+      sent: s.sent,
+      notSent: !s.sent,
+      send: () => this.setState({ sent: true }),
+      reset: () => this.setState({ sent: false })
+    };
+  }
+}
+
+const comp = new Component({"accent": "#FF5A1F"});
+vals = Vue.reactive(comp.renderVals());
+Vue.createApp({ template: '#tpl', setup: () => vals }).mount('#app');
+Vue.nextTick(() => comp.componentDidMount && comp.componentDidMount());
+</script>
+</body>
+</html>
